@@ -21,5 +21,9 @@
 <h4>- Helps identify least and most profitable customers, thus helping the business to concentrate marketing activities on those most likely to buy your products or services</h4>
 <h4>- Helps build loyal relationships with customers by developing and offering them the products and services they want</h4>
 <h4>- Helps improve customer service and alsp maximize use of your resourses</h4>
-<h4>- Helps improve or tweak products to meet customer requirements
-    - Helps increase profit by keeping costs down</h4>
+<h4>- Helps improve or tweak products to meet customer requirements</h4>
+<h4>- Helps increase profit by keeping costs down</h4>
+
+![Test Image1](https://www.enterrasolutions.com/wp-content/uploads/2016/08/Segmentation-clear.png)
+
+<h3>     I am performing Customer Segmentation using Decision Tree and also K-Means Clusting.</h3>
