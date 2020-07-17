@@ -33,7 +33,7 @@
 <h4>Data set needed for this project will be available [here](https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python)</h4>
 
 <h2>Code</h2>
-<h4>First we are supposed to import all the libraries and dependencies which are needed for the following codes</h4>
+<h4>First we are supposed to import all the libraries an which are needed for executing the following codes</h4>
 
 ```
 import pandas as pd
@@ -43,5 +43,21 @@ import seaborn as sns
 %matplotlib inline
 
 ```
+<h4>Then read in the Mall_customers csv file as a DataFrame called cust.
+ 
+ ```
+ cust=pd.read_csv("Mall_Customers.csv")
+ cust.head()
+ 
+ ```
+<h4>Then to know how many columns are there and type of each column we hav to do:</h4>
+```
+cust.info()
+``
+<h4>To compute the summary of stastics pertaining to DataFrame columns which gives summary of only numeric columns
+```
+cust.describe()
+```
+<h4>
 
 
