@@ -130,6 +130,135 @@ ax.pie(pct,labels=lbs,autopct='%1.2f%%')
 plt.show()
 
 ```
+<h4>Plotting the Barplot to know the distribution of Customers in each age-group. From this we come to know that the customers are more of age 31-40 so they should be more focused for marketing.</h4>
+
+```
+
+age0=cust.Age[(cust.Age<20)]
+age1= cust.Age[(cust.Age>=20)&(cust.Age<=30)]
+age2=cust.Age[(cust.Age>30)&(cust.Age<=40)]
+age3=cust.Age[(cust.Age>40)&(cust.Age<=50)]
+age4=cust.Age[(cust.Age>50)&(cust.Age<=60)]
+age5=cust.Age[(cust.Age>60)]
+x=['Below 20','21-30','31-40','41-50','51-60','60+']
+y=[len(age0.values),len(age1.values),len(age2.values),len(age3.values),len(age4.values),len(age5.values)]
+sns.barplot(x=x,y=y,palette='Accent')
+plt.title(str("Number of customers based on Age Group"))
+plt.xlabel(str("Age"))
+plt.ylabel(str("Number of customers"))
+plt.show()
+
+```
+<h4>Then we make a bar plot to visualize the number of customers according to their annual income. The majority of the customers have annual income in the range Rs60000 and Rs75000.</h4>
+
+```
+
+plt.figure(figsize=(15,7))
+income0=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]<15)]
+income1=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]>=15)&(cust["Annual Income (k$)"]<=30)]
+income2=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]>30)&(cust["Annual Income (k$)"]<=45)]
+income3=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]>45)&(cust["Annual Income (k$)"]<=60)]
+income4=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]>60)&(cust["Annual Income (k$)"]<=75)]
+income5=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]>75)&(cust["Annual Income (k$)"]<=90)]
+income6=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]>90)&(cust["Annual Income (k$)"]<=105)]
+income7=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]>105)&(cust["Annual Income (k$)"]<=120)]
+income8=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]>120)&(cust["Annual Income (k$)"]<=135)]
+income9=cust["Annual Income (k$)"][(cust["Annual Income (k$)"]>135)&(cust["Annual Income (k$)"]<=150)]
+x=['Below 15','15-30','31-45','46-60','61-75','76-90','91-105','106-120','121-135','136-150']
+y=[len(income0.values),len(income1.values),len(income2.values),len(income3.values),len(income4.values),len(income5.values),len(income6.values),len(income7.values),len(income8.values),len(income9.values)]
+sns.barplot(x=x,y=y)
+
+plt.title("Number of Customers based on Annual Income")
+plt.xlabel("Annual income(k$)")
+plt.ylabel("Number of customers")
+
+```
+<h4>Next continue with making a bar plot to visualize the number of customers according to their spending scores. The majority of the customers have spending score in the range 41–60.</h4>
+
+```
+
+spend0=cust["Spending Score (1-100)"][(cust["Spending Score (1-100)"]>0)&(cust["Spending Score (1-100)"]<=20)]
+spend1=cust["Spending Score (1-100)"][(cust["Spending Score (1-100)"]>20)&(cust["Spending Score (1-100)"]<=40)]
+spend2=cust["Spending Score (1-100)"][(cust["Spending Score (1-100)"]>40)&(cust["Spending Score (1-100)"]<=60)]
+spend3=cust["Spending Score (1-100)"][(cust["Spending Score (1-100)"]>60)&(cust["Spending Score (1-100)"]<=80)]
+spend4=cust["Spending Score (1-100)"][(cust["Spending Score (1-100)"]>80)&(cust["Spending Score (1-100)"]<=100)]
+x=['0-20','21-40','41-60','61-80','81-100']
+y=[len(spend0.values),len(spend1.values),len(spend2.values),len(spend3.values),len(spend4.values)]
+sns.barplot(x=x,y=y,palette='gist_rainbow')
+
+```
+<h3>Decision Tree Classification<h3>
+ 
+ <h4>Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features.</h4>
+ <h4>Here we use Decision tree Classifier for getting precision based on Gender</h4>
+ 
+ <h4>Use model_selection.train_test_split from sklearn to split the data into training and testing sets. Set test_size=0.30</h4>
+ 
+ ```
+ 
+ from sklearn.model_selection import train_test_split
+ 
+ ```
+ <h4>X is the data with independent variables and y is the data with dependent variables</h4>
+ 
+ ```
+ X=cust.drop('Gender',axis=1)
+ y=cust['Gender']
+ 
+ ```
+ 
+ ```
+ 
+ X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.30)
+ 
+ ```
+ <h4>Training the model:</h4>
+ <h4>Importing DecisionTreeClassifier from sklearn.Tree</h4>
+ 
+ ```
+ 
+ from sklearn.tree import DecisionTreeClassifier
+ ```
+ <h4>Creating an Instance of DecisionTreeClassifier() named as dtree
+ 
+ ```
+ 
+ dtree=DecisionTreeClassifier()
+ 
+ ```
+ <h4>We’re going to use x_train and y_train, obtained above, to train our decision tree classifier. We’re using the fit method and passing the parameters as shown below.</h4>
+ 
+ ```
+ 
+ dtree.fit(X_train,y_train)
+ 
+ ```
+ <h4>Once the model is trained, it’s ready to make predictions. We can use the predict method on the model and pass x_test as a parameter to get the output as y_pred.</h4>
+ 
+ ```
+ 
+ predictions=dtree.predict(X_test)
+ 
+ ```
+ <h4>The classification report shows a representation of the main classification metrics on a per-class basis and the Confusion matrix is a summary of prediction results on a classification problem. We have to import classification_report and confusion_matrix from sklearn.metrics</h4>
+ 
+ ```from sklearn.metrics import classification_report,confusion_matrix
+ 
+ ```
+ ```
+ print(classification_report(y_test,predictions))
+ 
+ ```
+```
+
+print(confusion_matrix(y_test,predictions))
+
+```
+ 
+ 
+ 
+
+
 
 
 
