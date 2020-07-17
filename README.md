@@ -27,4 +27,11 @@
 ![Test Image1](https://www.enterrasolutions.com/wp-content/uploads/2016/08/Segmentation-clear.png)
 
 <h2>The Challenge</h2>
-<h4>You are owning a su</h4>
+<h4>You are owning a Mall and from membership card you have got some basic information of the customers such as gender, age, annual income and spending score. With this information you can perform customer segmentation through which you can decide who are your target customers and give this sense to marketing team and plan the strategy accrdingly. </h4>
+
+<h2>Data</h2>
+<h4>Data set needed for this project will be available here(https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python)</h4>
+
+<h2>Code</h2>
+<h4>first we are supposed to import all the libraries and dependencies which are needed for the following codes</h4>
+
