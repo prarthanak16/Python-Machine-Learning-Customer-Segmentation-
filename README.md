@@ -26,4 +26,5 @@
 
 ![Test Image1](https://www.enterrasolutions.com/wp-content/uploads/2016/08/Segmentation-clear.png)
 
-<h3>     I am performing Customer Segmentation using Decision Tree and also K-Means Clusting.</h3>
+<h2>The Challenge</h2>
+<h4>You are owning a su</h4>
