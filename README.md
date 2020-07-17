@@ -108,6 +108,29 @@ cust.drop(["CustomerID"], axis = 1, inplace=True)
 sns.pairplot(cust,hue='Gender',palette='Set1')
 
 ```
+<h4>Next we do a Bar plot to check the distribution of Male and Female in the dataset. Its shows that female population is more than the male population which gives a data on whom to target more to create an oppotunity to increase the marketing sales.</h4>
+
+```
+gender=cust.Gender.value_counts()
+sns.barplot(x=gender.index,y=gender.values)
+
+```
+
+<h4>Next plot a piechart to know the population of male and female in terms of percentage. </h4>
+
+```
+
+fig = plt.figure()
+pct=round(gender/sum(gender)*100)
+ax = fig.add_axes([0,0,1,1])
+ax.axis('equal')
+
+lbs=['Female','Male']
+ax.pie(pct,labels=lbs,autopct='%1.2f%%')
+plt.show()
+
+```
+
 
 
 
