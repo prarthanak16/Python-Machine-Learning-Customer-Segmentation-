@@ -7,12 +7,12 @@
 <h3>> Customers' Geography</h3>
 <h3>> Customers' Psychography</h3>
 <h3>> Customers' Behavior</h3>
-<h2>Customer segmentation procedures</h2>
-<h3>Customer segmentation, also called consumer segmentation or client segmentation, procedures include:
 
-Deciding what data will be collected and how it will be gathered
-Collecting data and integrating data from various sources
-Developing methods of data analysis for segmentation
-Establishing effective communication among relevant business units (such as marketing and customer service) about the segmentation
-Implementing applications to effectively deal with the data and respond to the information it provides
-Benefits of customer segmentation</h3>
+<h2>Customer segmentation procedures</h2>
+<h3>Customer segmentation, also called consumer segmentation or client segmentation, procedures include:</h3>
+
+<h3>* Deciding what data will be collected and how it will be gathered</h3>
+<h3>* Collecting data and integrating data from various sources</h3>
+<h3>* Developing methods of data analysis for segmentation</h3>
+<h3>* Establishing effective communication among relevant business units (such as marketing and customer service) about the segmentation</h3>
+<h3>* Implementing applications to effectively deal with the data and respond to the information it provides</h3>
