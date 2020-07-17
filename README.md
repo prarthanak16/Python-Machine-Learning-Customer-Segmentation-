@@ -240,7 +240,8 @@ sns.barplot(x=x,y=y,palette='gist_rainbow')
  predictions=dtree.predict(X_test)
  
  ```
- <h4>The classification report shows a representation of the main classification metrics on a per-class basis and the Confusion matrix is a summary of prediction results on a classification problem. We have to import classification_report and confusion_matrix from sklearn.metrics</h4>
+ <h4>The classification report shows a representation of the main classification metrics on a per-class basis and the Confusion matrix is a summary of prediction results on a classification problem.</h4>
+ <h4>We have to import classification_report and confusion_matrix from sklearn.metrics</h4>
  
  ```from sklearn.metrics import classification_report,confusion_matrix
  
@@ -254,6 +255,24 @@ sns.barplot(x=x,y=y,palette='gist_rainbow')
 print(confusion_matrix(y_test,predictions))
 
 ```
+<h2>K-means Clustering </h2>
+<h4>K-means clustering is a clustering algorithm that aims to partition n observations into k clusters.</h4>
+
+<h3>There are 3 steps:</h3>
+<h4>* Initialisation – K initial “means” (centroids) are generated at random</h4>
+<h4> * Assignment – K clusters are created by associating each observation with the nearest centroid</h4>
+<h4>* Update – The centroid of the clusters becomes the new mean</h4>
+ 
+
+<h4>Assignment and Update are repeated iteratively until convergence</h4>
+
+<h4>The end result is that the sum of squared errors is minimised between points and their respective centroids.</h4>
+
+<h2>Within Cluster Sum Of Squares (WCSS)</h2>
+<h4>WCSS is the sum of squares of the distances of each data point in all clusters to their respective centroids.</h4>
+
+![Test Image2](https://www.enterrasolutions.com/wp-content/uploads/2016/08/Segmentation-clear.png)
+
  
  
  
