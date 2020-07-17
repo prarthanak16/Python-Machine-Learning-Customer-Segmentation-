@@ -53,13 +53,23 @@ import seaborn as sns
 <h4>Then to know how many columns are there and type of each column we hav to do:</h4>
 ```
 cust.info()
-``
+
+```
 <h4>To compute the summary of stastics pertaining to DataFrame columns which gives summary of only numeric columns
 ```
 
 cust.describe()
 
 ```
+<h4>Constructing histogram based on age frequency.Here we get to know that number of customers who belong to particular age-groups</h4>
+```
+
+sns.set_style('whitegrid')
+cust['Age'].hist(bins=30)
+plt.xlabel('Age')
+
+```
+
 <h4>
 
 
