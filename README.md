@@ -43,7 +43,7 @@ import seaborn as sns
 %matplotlib inline
 
 ```
-<h4>Then read in the Mall_customers csv file as a DataFrame called cust.
+<h4>Then read in the Mall_customers csv file as a DataFrame called cust.</h4>
  
  ```
  cust=pd.read_csv("Mall_Customers.csv")
@@ -51,17 +51,20 @@ import seaborn as sns
  
  ```
 <h4>Then to know how many columns are there and type of each column we hav to do:</h4>
+
 ```
 cust.info()
 
 ```
-<h4>To compute the summary of stastics pertaining to DataFrame columns which gives summary of only numeric columns
+<h4>To compute the summary of stastics pertaining to DataFrame columns which gives summary of only numeric columns</h4>
+ 
 ```
 
 cust.describe()
 
 ```
 <h4>Constructing histogram based on age frequency.Here we get to know that number of customers who belong to particular age-groups</h4>
+
 ```
 
 sns.set_style('whitegrid')
@@ -70,6 +73,40 @@ plt.xlabel('Age')
 
 ```
 
-<h4>
+<h4>Construction of jointplot() allows you to match up two distplots for bivariate data.Here we consider Age and Annual Income.</h4>
+ ```
+ 
+ sns.jointplot(x='Age',y='Annual Income (k$)',data=cust)
+ 
+ ```
+ 
+ <h4>Another way of constructing jointplot() of kind "kde" by considering Age and Spending Score.</h4>
+ 
+ ```
+ 
+ sns.jointplot(x='Age',y='Spending Score (1-100)',data=cust,color='green',kind='kde')
+ 
+ ```
+ <h4>Then we have to do a boxplot for Annual Income and Spending score for better understanding of distribution range. Here we clealy come to know that distribution range of Spending score is more than Annual Income</h4>
+ 
+ ```
+ 
+plt.figure(figsize=(14,5))
+plt.subplot(1,2,1)
+sns.boxplot(y=cust["Spending Score (1-100)"],color="brown")
+plt.subplot(1,2,2)
+sns.boxplot(y=cust["Annual Income (k$)"],color="yellow")
+plt.show()
+
+```
+<h4>Next constructing an pairplot() which will plot pairwise relationships across an entire dataframe. Here we first drop the CustomerID because it is not needed then we plot for Age, Annual Income and Spending score based on Gender.</h4>
+
+```
+
+cust.drop(["CustomerID"], axis = 1, inplace=True)
+sns.pairplot(cust,hue='Gender',palette='Set1')
+
+```
+
 
 
