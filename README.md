@@ -56,7 +56,9 @@ cust.info()
 ``
 <h4>To compute the summary of stastics pertaining to DataFrame columns which gives summary of only numeric columns
 ```
+
 cust.describe()
+
 ```
 <h4>
 
