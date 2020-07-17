@@ -74,6 +74,7 @@ plt.xlabel('Age')
 ```
 
 <h4>Construction of jointplot() allows you to match up two distplots for bivariate data.Here we consider Age and Annual Income.</h4>
+
  ```
  
  sns.jointplot(x='Age',y='Annual Income (k$)',data=cust)
