@@ -3,10 +3,10 @@
  <h2>What is Customer Segmentation ?</h2>
       <h4>Customer Segmentation is the practice of dividing a customer base into groups of individuals that are similar in specific ways relevant to marketing,such as age,gender,interests and spending habits. Companies employing customer segmentation operates under the fact that every customer is different and their marketing efforts would be better served if they target specific and small groups with messagesz that consumers would find it relevant and lead them to buy something. Companies also hope for deeper understanding of their customers' prferences and needs.</h4>
 <h4>Customer Segmentation relies on identifying key differentiators that divide customers into groups that are targeted :</h4>
-<h4>> Customers' demographics </h4>
-<h4>> Customers' Geography</h4>
-<h4>> Customers' Psychography</h4>
-<h4>> Customers' Behavior</h4>
+<h4>> Customers' demographics (age,gender,income,race,religion,family-size,ethnicity,education level) </h4>
+<h4>> Customers' Geography (where they live and work)</h4>
+<h4>> Customers' Psychography (social class,lifestyle and personality characteristics)</h4>
+<h4>> Customers' Behavior (spending,consumption,usage and desired benefits)</h4>
 
 <h2>Customer segmentation procedures</h2>
 <h4>Customer segmentation, also called consumer segmentation or client segmentation, procedures include:</h4>
@@ -16,3 +16,10 @@
 <h4>* Developing methods of data analysis for segmentation</h4>
 <h4>* Establishing effective communication among relevant business units (such as marketing and customer service) about the segmentation</h4>
 <h4>* Implementing applications to effectively deal with the data and respond to the information it provides</h4>
+
+<h2>Benefits of Customer Segmentation</h2>
+<h4>- Helps identify least and most profitable customers, thus helping the business to concentrate marketing activities on those most likely to buy your products or services</h4>
+<h4>- Helps build loyal relationships with customers by developing and offering them the products and services they want</h4>
+<h4>- Helps improve customer service and alsp maximize use of your resourses</h4>
+<h4>- Helps improve or tweak products to meet customer requirements
+    - Helps increase profit by keeping costs down</h4>
