@@ -269,16 +269,71 @@ print(confusion_matrix(y_test,predictions))
 <h4>The end result is that the sum of squared errors is minimised between points and their respective centroids.</h4>
 
 <h2>Within Cluster Sum Of Squares (WCSS)</h2>
+
 <h4>WCSS is the sum of squares of the distances of each data point in all clusters to their respective centroids.</h4>
-
 ![Test1 Image2](https://miro.medium.com/max/301/0*_3RAyFi3C2zJ-ShA.png)
+<h4>where Yi is centroid for observation Xi. </h4>
+<h4>The main goal is to maximize number of clusters and in limiting case each data point becomes its own cluster centroid.</h4>
 
+</h4>Next we have t0 plot Within Cluster Sum Of Squares (WCSS) against the the number of clusters (K Value) to figure out the optimal number of clusters value. WCSS measures sum of distances of observations from their cluster centroids which is given by the above formula.</h4>
+
+```
+
+wcss=[]
+gender=cust.Gender.value_counts()
+for k in range(1,11):
+  kmeans=KMeans(n_clusters=k)
+  kmeans.fit(cust.iloc[:,2:])
+  wcss.append(kmeans.inertia_)
+
+```
+```
+
+plt.grid()
+plt.plot(range(1,11),wcss, linewidth=1, color="red", marker ="8")
+plt.xlabel("K Value")
+plt.title("Within-Cluster-of-Squares ")
+plt.xticks(np.arange(1,11,1))
+plt.ylabel("WCSS")
+plt.show()
+
+```
+<h4>Here is the code for getting the labels property of the K-means clustering</h4>
+
+```
+
+kmeans.labels_
+
+```
+<h2>The Elbow Method</h2>
  
- 
- 
+<h4>Calculate the Within Cluster Sum of Squared Errors (WSS) for different values of k, and choose the k for which WSS first starts to diminish. In the plot of WSS-versus k, this is visible as an elbow.</h4>
+
+<h4>The optimal K value is found to be 5 using the elbow method.</h4>
+
+<h4>Finally we have to 3D plot to visualize the spending score of the customers with their annual income. The data points are separated into 5 classes which are represented in different colours as shown in the 3D plot.</h4>
+
+```
+
+km = KMeans(n_clusters=5)
+clusters = km.fit_predict(cust.iloc[:,2:])
+cust["label"] = clusters
+
+from mpl_toolkits.mplot3d import Axes3D
+
+fig = plt.figure(figsize=(25,15))
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(cust.Age[cust.label == 0], cust["Annual Income (k$)"][cust.label == 0], cust["Spending Score (1-100)"][cust.label == 0], c='blue', s=60)
+ax.scatter(cust.Age[cust.label == 1], cust["Annual Income (k$)"][cust.label == 1], cust["Spending Score (1-100)"][cust.label == 1], c='red', s=60)
+ax.scatter(cust.Age[cust.label == 2], cust["Annual Income (k$)"][cust.label == 2], cust["Spending Score (1-100)"][cust.label == 2], c='green', s=60)
+ax.scatter(cust.Age[cust.label == 3], cust["Annual Income (k$)"][cust.label == 3], cust["Spending Score (1-100)"][cust.label == 3], c='orange', s=60)
+ax.scatter(cust.Age[cust.label == 4], cust["Annual Income (k$)"][cust.label == 4], cust["Spending Score (1-100)"][cust.label == 4], c='purple', s=60)
+ax.view_init(30, 185)
+plt.xlabel("Age")
+plt.ylabel("Annual Income (k$)")
+ax.set_zlabel('Spending Score (1-100)')
 
 
-
-
-
-
+```
+<h2>Conclusion</h2>
+<h4>K-Means clustering in segmentations of customers helps in better understanding of the customers and target to be focused on which in turn will help in increasing the profit of the company.</h4>
