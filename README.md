@@ -271,7 +271,7 @@ print(confusion_matrix(y_test,predictions))
 <h2>Within Cluster Sum Of Squares (WCSS)</h2>
 <h4>WCSS is the sum of squares of the distances of each data point in all clusters to their respective centroids.</h4>
 
-![Test Image2](https://www.enterrasolutions.com/wp-content/uploads/2016/08/Segmentation-clear.png)
+![Test1 Image2](https://www.enterrasolutions.com/wp-content/uploads/2016/08/Segmentation-clear.png)
 
  
  
